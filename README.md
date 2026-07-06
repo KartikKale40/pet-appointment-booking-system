@@ -2,116 +2,332 @@
 
 ## Overview
 
-Pet Appointment Booking System is a full-stack web application developed to manage online appointment scheduling for pets. The system allows users to submit appointment requests through a responsive booking interface, while administrators can manage and monitor appointment records through a dedicated admin panel.
+The **Pet Appointment Booking System** is a full-stack web application developed to streamline the process of scheduling and managing pet appointments. The system provides an intuitive interface for users to book appointments online, while offering administrators a dedicated dashboard to manage appointment requests, update appointment statuses, and monitor booking records.
 
-The application was developed using PHP and MySQL for backend processing and database management, while HTML, CSS, Bootstrap, and JavaScript were used for frontend development. The project demonstrates complete integration between frontend and backend technologies for implementing workflow management and appointment tracking.
-
----
-
-## Features
-
-### User Module
-- Online pet appointment booking
-- Responsive appointment form
-- Appointment status tracking
-- User-friendly interface
-- Real-time form validation
-
-### Admin Module
-- View all appointment requests
-- Approve or reject appointments
-- Manage appointment workflow
-- Update appointment status dynamically
-- Monitor booking records efficiently
+The application is built using **PHP** and **MySQL** for backend processing and database management, while **HTML5**, **CSS3**, **Bootstrap**, and **JavaScript** are used to create a responsive and user-friendly frontend. The project demonstrates practical implementation of CRUD operations, session-based authentication, database integration, and workflow management in a web application.
 
 ---
 
-## Technology Stack
+# Features
 
-### Frontend
-- HTML5
-- CSS3
-- Bootstrap
-- JavaScript
+## User Module
 
-### Backend
-- PHP
-
-### Database
-- MySQL
-
-### Additional Technologies
-- SQL Queries
-- Session Management
+* User registration and login
+* Online pet appointment booking
+* Responsive appointment registration form
+* View scheduled appointments
+* Track appointment status
+* Client-side form validation
+* User dashboard for appointment management
 
 ---
 
-## System Functionality
+## Administrator Module
 
-The frontend interface was designed using HTML, CSS, and Bootstrap to provide a responsive and user-friendly appointment booking system. Users can enter details such as name, appointment date, appointment time, and purpose of appointment through the booking form.
-
-JavaScript-based client-side validation was implemented to ensure all required fields are properly filled and valid data is submitted. This validation reduces invalid form submissions and improves data accuracy.
-
-On the backend, PHP was used to process form submissions and handle appointment management operations. Appointment details submitted through the form are captured using the POST method and stored in the MySQL database using SQL INSERT queries.
-
-The database structure includes fields such as:
-- Appointment ID
-- User Name
-- Appointment Date
-- Appointment Time
-- Purpose of Appointment
-- Appointment Status
-
-The appointment status field is used to track whether the request is Pending, Approved, or Rejected.
-
-An admin panel was developed to manage appointment requests efficiently. Administrators can view all submitted bookings using SQL SELECT queries and update appointment status using SQL UPDATE operations. This workflow allows proper management and monitoring of appointment requests.
-
-The system also provides appointment status visibility to users so they can track the current state of their booking request in real time.
+* Secure administrator login
+* Dashboard for appointment management
+* View all appointment requests
+* Schedule appointments
+* Update appointment status
+* Manage appointment workflow
+* Monitor appointment records
 
 ---
 
-## Database Operations
+# Technology Stack
 
-The project uses MySQL as the database management system. The following SQL operations were implemented:
+## Frontend
 
-- INSERT – Store appointment details
-- SELECT – Fetch appointment records
-- UPDATE – Modify appointment status
-- DELETE – Remove appointment records if required
+* HTML5
+* CSS3
+* Bootstrap
+* JavaScript
 
----
+## Backend
 
-## Security and Validation
+* PHP
 
-- Client-side form validation using JavaScript
-- Input field verification
-- Session-based admin management
-- Controlled appointment workflow
-- Status-based appointment tracking
+## Database
 
----
+* MySQL
 
-## Development Environment
+## Development Tools
 
-The project was developed using Visual Studio Code as the primary code editor for frontend and backend development.
-
-### Tools and Software Used
-
-- Visual Studio Code – Source code editor
-- XAMPP – Local server environment
-- phpMyAdmin – Database management
-- Bootstrap – Responsive UI framework
+* Visual Studio Code
+* XAMPP
+* phpMyAdmin
 
 ---
 
-## Installation and Setup
+# System Architecture
 
-1. Install XAMPP on your system.
-2. Start Apache and MySQL services from XAMPP Control Panel.
-3. Copy the project folder into the `htdocs` directory.
-4. Import the database file into phpMyAdmin.
-5. Open the project in Visual Studio Code.
-6. Run the project in browser using:
+```text
+Client (Browser)
+        │
+        ▼
+HTML • CSS • Bootstrap • JavaScript
+        │
+        ▼
+            PHP
+        │
+        ▼
+      MySQL Database
+```
+
+---
+
+# Core Functionalities
+
+### User Authentication
+
+* User Registration
+* User Login
+* Session Management
+* Secure Logout
+
+### Appointment Management
+
+* Book Appointment
+* View Appointment Details
+* Appointment Status Tracking
+* Schedule Management
+
+### Administrator Functions
+
+* Administrator Login
+* View Appointment Requests
+* Schedule Appointments
+* Manage Appointment Records
+* Update Appointment Status
+
+---
+
+# Database Operations
+
+The system performs the following database operations:
+
+| Operation | Description                              |
+| --------- | ---------------------------------------- |
+| INSERT    | Store user and appointment details       |
+| SELECT    | Retrieve appointment records             |
+| UPDATE    | Update appointment status and schedule   |
+| DELETE    | Remove appointment records when required |
+
+---
+
+# Security Features
+
+* Session-based authentication
+* Input validation
+* Client-side form validation using JavaScript
+* Protected administrator access
+* Controlled appointment workflow
+
+---
+
+# Project Structure
+
+```text
+Pet-Appointment-Booking-System/
+│
+├── screenshots/
+│   ├── index.png
+│   ├── Appointment_Registration.png
+│   ├── User_Dashboard.png
+│   ├── Appointments_Details.png
+│   └── Admin_Schedule_Appointment.png
+│
+├── admin-dashboard.php
+├── admin-login.php
+├── admin-logout.php
+├── appointment.php
+├── appointment.sql
+├── book.php
+├── index.php
+├── login.php
+├── README.md
+├── Reconfig.php
+├── register.php
+├── schedule.php
+├── script.js
+├── style.css
+├── user.php
+├── user_info.php
+└── user_logout.php
+```
+
+---
+
+# Installation
+
+## Prerequisites
+
+* PHP 8.0 or above
+* MySQL
+* XAMPP
+* Modern Web Browser
+
+---
+
+## Setup Instructions
+
+### 1. Clone the Repository
 
 ```bash
-http://localhost/pet-appointment-booking-system
+git clone https://github.com/your-username/Pet-Appointment-Booking-System.git
+```
+
+### 2. Move the Project
+
+Copy the project folder into the **htdocs** directory.
+
+```text
+xampp/
+└── htdocs/
+    └── Pet-Appointment-Booking-System/
+```
+
+### 3. Start XAMPP
+
+Start the following services:
+
+* Apache
+* MySQL
+
+### 4. Import the Database
+
+* Open **phpMyAdmin**
+* Create a new database
+* Import the `appointment.sql` file
+
+### 5. Configure Database
+
+Update your database credentials in:
+
+```text
+Reconfig.php
+```
+
+### 6. Run the Application
+
+```text
+http://localhost/Pet-Appointment-Booking-System/
+```
+
+---
+
+# Default Administrator Credentials
+
+Use the following credentials to access the administrator panel:
+
+| Username | Password |
+| -------- | -------- |
+| admin    | admin123 |
+
+> **Note:** These credentials are intended for demonstration and development purposes only. It is recommended to change the default password before deploying the application in a production environment.
+
+---
+
+# Application Workflow
+
+```text
+User Registration/Login
+           │
+           ▼
+Book Pet Appointment
+           │
+           ▼
+Appointment Stored in Database
+           │
+           ▼
+Administrator Reviews Request
+           │
+     ┌─────┴─────┐
+     ▼           ▼
+Approve      Schedule Appointment
+     │           │
+     └─────┬─────┘
+           ▼
+Updated Appointment Status
+           │
+           ▼
+Visible to User Dashboard
+```
+
+---
+
+# Screenshots
+
+## Home Page
+
+![Home Page](screenshots/index.png)
+
+---
+
+## Appointment Registration
+
+![Appointment Registration](screenshots/Appointment_Registration.png)
+
+---
+
+## User Dashboard
+
+![User Dashboard](screenshots/User_Dashboard.png)
+
+---
+
+## Appointment Details
+
+![Appointment Details](screenshots/Appointments_Details.png)
+
+---
+
+## Administrator Dashboard
+
+![Administrator Dashboard](screenshots/Admin_Schedule_Appointment.png)
+
+---
+
+# Future Enhancements
+
+* Email notifications for appointment confirmation
+* SMS appointment reminders
+* Pet profile management
+* Veterinary profile management
+* Appointment cancellation and rescheduling
+* Calendar-based appointment scheduling
+* Search and filtering of appointments
+* Dashboard analytics and reports
+* Responsive mobile optimization
+* REST API integration
+
+---
+
+# Learning Outcomes
+
+This project demonstrates practical implementation of:
+
+* Full Stack Web Development
+* PHP Server-Side Programming
+* MySQL Database Management
+* CRUD Operations
+* Session Management
+* Authentication and Authorization
+* Form Validation
+* Responsive Web Design
+* Database Connectivity
+* Appointment Workflow Management
+
+---
+
+# Author
+
+**Kartik Kale**
+
+Computer Engineering Student
+
+---
+
+# License
+
+This project is developed for educational and learning purposes. It may be used, modified, and extended for academic or personal projects.
